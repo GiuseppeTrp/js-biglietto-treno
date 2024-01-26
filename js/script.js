@@ -6,18 +6,22 @@ let finalPrice = priceForKm * km;
 let sales20 = ((finalPrice * 20) / 100) ;
 let sales40 =  ((finalPrice * 40) / 100) ;
 
+if((isNaN(age)) || (isNaN(km))){
+    alert("Caratteri non consentiti; inserire numeri ");
+    document.getElementById("price").innerHTML = "NULL"
 
-if (age <= 18){
-    
-document.getElementById("price").innerHTML = ( (finalPrice - sales20).toFixed(2) );
-    
-} else if ( age >= 65){
-    document.getElementById("price").innerHTML =  ( (finalPrice - sales40).toFixed(2) );
+} 
+    else if (age <= 18){
+        
+    document.getElementById("price").innerHTML = ( (finalPrice - sales20).toFixed(2) );
+        
+    } else if ( age >= 65){
+        document.getElementById("price").innerHTML =  ( (finalPrice - sales40).toFixed(2) );
 
 
-} else{
+    } else {
 
-document.getElementById("price").innerHTML = ( finalPrice.toFixed(2) )}
+    document.getElementById("price").innerHTML = ( finalPrice.toFixed(2) );}
 
 
 
